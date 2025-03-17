@@ -4,12 +4,12 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Matchmaker Lite</title>
+	<title>Matchmaker</title>
 </head>
 
 <body>
 	<h1>Erik's Matchmaker</h1>
-	<p>Instructions:</p>
+	<p>Instructions: Answer the questions to the best of your ability to see if we're meant to be.</p>
 
 	
 
@@ -65,18 +65,17 @@
 
 <script>
 
-function calculateCompatibility() { 
-	
-	compatability.score = document.getElementById("q1").innerHTML + document.getElementById("q2").innerHTML + document.getElementById("q3").innerHTML + document.getElementById("q4").innerHTML + document.getElementById("q5").innerHTML
+function calculateCompatibility() {
+	var compatabilityscore = parseInt(q1, 10) + parseInt(q1, 10) + parseInt(q3, 10) + parseInt(q4, 10) + parseInt(q5, 10)
 }
 
-if (compatability.score < 10) {
+if (compatabilityscore < 10) {
 	document.getElementById("compatibility").innerHTML = "Take a hike to Monroeville!"; }
 
-	else if (10 < compatability.score < 20) {
+	else if (10 < compatabilityscore < 20) {
 		document.getElementById("compatibility").innerHTML = "We can go to the mall sometime."; }
 
-		else if (compatability.score > 20) {
+		else if (compatabilityscore > 20) {
 			document.getElementById("compatibility").innerHTML = "Will you be my Geradling?"; }
 
 
