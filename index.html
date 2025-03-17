@@ -35,11 +35,11 @@
 
 	<label>Do I have the guts, to put this to your head?</label><br />
 	<select id="q3">
-		<option value="5">Strongly Agree</option>
-		<option value="4">Agree</option>
-		<option value="3">These words are changing nothing, as your body remains.</option>
-		<option value="2">Disagree</option>
-		<option value="1">Strongly Disagree</option>
+		<option value="1">Strongly Agree</option>
+		<option value="2">Agree</option>
+		<option value="5">These words are changing nothing, as your body remains.</option>
+		<option value="4">Disagree</option>
+		<option value="3">Strongly Disagree</option>
 	</select>
 
 	<label>But would anything matter, if your already dead?</label><br />
@@ -53,23 +53,30 @@
 
 	<label>And should I be shocked now, by the last thing you said?</label><br />
 	<select id="q5">
-		<option value="5">Strongly Agree</option>
-		<option value="4">Agree</option>
+		<option value="1">Strongly Agree</option>
+		<option value="2">Agree</option>
 		<option value="3">Neither agree nor disagree</option>
-		<option value="2">Disagree</option>
-		<option value="1">Saying you loved me made things harder at best.</option>
+		<option value="4">Disagree</option>
+		<option value="5">Saying you loved me made things harder at best.</option>
 	</select>
 
 	<button onclick="calculateCompatibility()">Calculate Compatibility</button>
 	<p id="compatibility"></p>
 
 <script>
-console.log("Starting Matchmaker Lite...");
 
-function calculateCompatibility() {
+function calculateCompatibility() { 
 	console.log("calculateCompatibility()");
+compatability.score = parseInt(q1, 10) + parseInt(q1, 10) + parseInt(q3, 10) + parseInt(q4, 10) + parseInt(q5, 10)
 
-	document.getElementById("compatibility").innerHTML = "Your compatibility is...";
+if (compatability.score < 10) {
+	document.getElementById("compatibility").innerHTML = "Take a hike to Monroeville!"; }
+
+	else if (10 < compatability.score < 20) {
+		document.getElementById("compatibility").innerHTML = "We can go to the mall sometime."; }
+
+		else if (compatability.score > 20) {
+			document.getElementById("compatibility").innerHTML = "Will you be my Geradling?"; }
 }
 
 </script>
