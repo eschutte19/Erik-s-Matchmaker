@@ -60,23 +60,41 @@
 		<option value="5">Saying you loved me made things harder at best.</option>
 	</select>
 
-	<button onclick="calculateCompatibility()">Calculate Compatibility</button>
-	<p id="compatibility"></p>
-
 <script>
+        function calculateCompatibility() {
+            console.log("Compatibility Calculations");
 
-function calculateCompatibility() {
-	var compatabilityscore = parseInt(q1, 10) + parseInt(q1, 10) + parseInt(q3, 10) + parseInt(q4, 10) + parseInt(q5, 10)
+			let value1 = parseInt(document.getElementById("q1").value)
+			let value2 = parseInt(document.getElementById("q2").value)
+			let value3 = parseInt(document.getElementById("q3").value)
+			let value4 = parseInt(document.getElementById("q4").value)
+			let value5 = parseInt(document.getElementById("q5").value)
+			
+			console.log("q1 Response:", value1);
+            console.log("q2 Response:", value2);
+            console.log("q3 Response:", value3);
+            console.log("q4 Response:", value4);
+            console.log("q5 Response:", value5);
+
+
+            let Total = value1 + value2 + value3 + value4 + value5;
+            let Percentage = Math.round((Total / 25) * 100);
+
+            console.log("Final Compatibility:", Percentage);
+		
+			let message = getCompatibilityMessage(Percentage);
+
+document.getElementById("compatibility").innerHTML = `You are ${Percentage}% compatible! <br> ${message}`;
 }
 
-if (compatabilityscore < 10) {
-	document.getElementById("compatibility").innerHTML = "Take a hike to Monroeville!"; }
-
-	else if (10 < compatabilityscore < 20) {
-		document.getElementById("compatibility").innerHTML = "We can go to the mall sometime."; }
-
-		else if (compatabilityscore > 20) {
-			document.getElementById("compatibility").innerHTML = "Will you be my Geradling?"; }
+function getCompatibilityMessage(percentage) {
+if (percentage >= 75) {
+	return "Will you be my Geradling?";
+} else if (percentage >= 50) {
+	return "We could go to the mall together.";
+} else if (percentage >= 0) {
+	return "Take a hike to Monroeville!";
+}
 
 
 </script>
