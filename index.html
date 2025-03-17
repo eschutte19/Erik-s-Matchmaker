@@ -67,7 +67,8 @@
 
 function calculateCompatibility() { 
 	console.log("calculateCompatibility()");
-compatability.score = parseInt(q1, 10) + parseInt(q1, 10) + parseInt(q3, 10) + parseInt(q4, 10) + parseInt(q5, 10)
+	compatability.score = .getElementById("q1").innerHTML + document.getElementById("q2").innerHTML + document.getElementById("q3").innerHTML + document.getElementById("q4").innerHTML + document.getElementById("q5").innerHTML
+
 
 if (compatability.score < 10) {
 	document.getElementById("compatibility").innerHTML = "Take a hike to Monroeville!"; }
