@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"></html>
-
+<style>
+body{ background-image: url("https://en.wikipedia.org/wiki/File:I_Brought_You_My_Bullets,_You_Brought_Me_Your_Love_cover.jpg");}
+</style>
 
 <head>
 	<meta charset="UTF-8">
@@ -98,7 +100,7 @@
 		
 			let message = getCompatibilityMessage(Percentage);
 
-document.getElementById("compatibility").innerHTML = `You are ${Percentage}% compatible! <br> ${message}`;
+document.getElementById("compatibility").innerHTML = `${Percentage}% compatible <br> ${message}`;
 }
 
 function getCompatibilityMessage(percentage) {
