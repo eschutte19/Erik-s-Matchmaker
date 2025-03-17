@@ -21,6 +21,7 @@
 		<option value="2">Disagree</option>
 		<option value="1">Our memories defeat us</option>
 	</select>
+	<span id="error-q5" style="color: red; display: none;">This question requires an answer</span>
 	<br /><br />
 
 	<label>But does anyone care?</label><br />
@@ -31,6 +32,7 @@
 		<option value="2">Disagree</option>
 		<option value="1">Strongly Disagree</option>
 	</select>
+	<span id="error-q5" style="color: red; display: none;">This question requires an answer</span>
 	<br /><br /><br />
 
 	<label>Do I have the guts, to put this to your head?</label><br />
@@ -41,6 +43,8 @@
 		<option value="4">Disagree</option>
 		<option value="3">Strongly Disagree</option>
 	</select>
+	<span id="error-q5" style="color: red; display: none;">This question requires an answer</span>
+	<br /><br /><br />
 
 	<label>But would anything matter, if your already dead?</label><br />
 	<select id="q4">
@@ -50,6 +54,8 @@
 		<option value="2">Disagree</option>
 		<option value="1">Theres no room in this hell, theres no room in the next.</option>
 	</select>
+<span id="error-q5" style="color: red; display: none;">This question requires an answer</span>
+<br /><br /><br />
 
 	<label>And should I be shocked now, by the last thing you said?</label><br />
 	<select id="q5">
@@ -59,6 +65,10 @@
 		<option value="4">Disagree</option>
 		<option value="5">Saying you loved me made things harder at best.</option>
 	</select>
+	<span id="error-q5" style="color: red; display: none;">This question requires an answer</span>
+	<br /><br /><br />
+
+
 	<button onclick="calculateCompatibility()">Your Compatibility is...</button>
     <p id="compatibility"></p>
 
@@ -99,7 +109,7 @@ if (percentage >= 75) {
 } else if (percentage >= 0) {
 	return "Take a hike to Monroeville!";
 }
-
+}
 
 </script>
 </body>
